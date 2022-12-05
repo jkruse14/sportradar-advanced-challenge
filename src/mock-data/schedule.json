@@ -1,0 +1,682 @@
+{
+    "copyright" : "NHL and the NHL Shield are registered trademarks of the National Hockey League. NHL and NHL team marks are the property of the NHL and its teams. © NHL 2022. All Rights Reserved.",
+    "totalItems" : 13,
+    "totalEvents" : 0,
+    "totalGames" : 13,
+    "totalMatches" : 0,
+    "metaData" : {
+      "timeStamp" : "20221205_221438"
+    },
+    "wait" : 10,
+    "dates" : [ {
+      "date" : "2022-12-03",
+      "totalItems" : 13,
+      "totalEvents" : 0,
+      "totalGames" : 13,
+      "totalMatches" : 0,
+      "games" : [ {
+        "gamePk" : 2022020379,
+        "link" : "/api/v1/game/2022020379/feed/live",
+        "gameType" : "R",
+        "season" : "20222023",
+        "gameDate" : "2022-12-03T19:00:00Z",
+        "status" : {
+          "abstractGameState" : "Final",
+          "codedGameState" : "7",
+          "detailedState" : "Final",
+          "statusCode" : "7",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 6,
+              "losses" : 16,
+              "ot" : 3,
+              "type" : "league"
+            },
+            "score" : 4,
+            "team" : {
+              "id" : 24,
+              "name" : "Anaheim Ducks",
+              "link" : "/api/v1/teams/24"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 12,
+              "losses" : 9,
+              "ot" : 2,
+              "type" : "league"
+            },
+            "score" : 5,
+            "team" : {
+              "id" : 30,
+              "name" : "Minnesota Wild",
+              "link" : "/api/v1/teams/30"
+            }
+          }
+        },
+        "venue" : {
+          "id" : 5098,
+          "name" : "Xcel Energy Center",
+          "link" : "/api/v1/venues/5098"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2022020379/content"
+        }
+      }, {
+        "gamePk" : 2022020381,
+        "link" : "/api/v1/game/2022020381/feed/live",
+        "gameType" : "R",
+        "season" : "20222023",
+        "gameDate" : "2022-12-04T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Final",
+          "codedGameState" : "7",
+          "detailedState" : "Final",
+          "statusCode" : "7",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 12,
+              "losses" : 11,
+              "ot" : 1,
+              "type" : "league"
+            },
+            "score" : 3,
+            "team" : {
+              "id" : 8,
+              "name" : "Montréal Canadiens",
+              "link" : "/api/v1/teams/8"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 14,
+              "losses" : 11,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 5,
+            "team" : {
+              "id" : 22,
+              "name" : "Edmonton Oilers",
+              "link" : "/api/v1/teams/22"
+            }
+          }
+        },
+        "venue" : {
+          "id" : 5100,
+          "name" : "Rogers Place",
+          "link" : "/api/v1/venues/5100"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2022020381/content"
+        }
+      }, {
+        "gamePk" : 2022020380,
+        "link" : "/api/v1/game/2022020380/feed/live",
+        "gameType" : "R",
+        "season" : "20222023",
+        "gameDate" : "2022-12-04T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Final",
+          "codedGameState" : "7",
+          "detailedState" : "Final",
+          "statusCode" : "7",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 13,
+              "losses" : 8,
+              "ot" : 1,
+              "type" : "league"
+            },
+            "score" : 1,
+            "team" : {
+              "id" : 21,
+              "name" : "Colorado Avalanche",
+              "link" : "/api/v1/teams/21"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 20,
+              "losses" : 3,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 5,
+            "team" : {
+              "id" : 6,
+              "name" : "Boston Bruins",
+              "link" : "/api/v1/teams/6"
+            }
+          }
+        },
+        "venue" : {
+          "id" : 5085,
+          "name" : "TD Garden",
+          "link" : "/api/v1/venues/5085"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2022020380/content"
+        }
+      }, {
+        "gamePk" : 2022020382,
+        "link" : "/api/v1/game/2022020382/feed/live",
+        "gameType" : "R",
+        "season" : "20222023",
+        "gameDate" : "2022-12-04T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Final",
+          "codedGameState" : "7",
+          "detailedState" : "Final",
+          "statusCode" : "7",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 20,
+              "losses" : 4,
+              "ot" : 1,
+              "type" : "league"
+            },
+            "score" : 3,
+            "team" : {
+              "id" : 1,
+              "name" : "New Jersey Devils",
+              "link" : "/api/v1/teams/1"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 8,
+              "losses" : 12,
+              "ot" : 5,
+              "type" : "league"
+            },
+            "score" : 2,
+            "team" : {
+              "id" : 4,
+              "name" : "Philadelphia Flyers",
+              "link" : "/api/v1/teams/4"
+            }
+          }
+        },
+        "venue" : {
+          "id" : 5096,
+          "name" : "Wells Fargo Center",
+          "link" : "/api/v1/venues/5096"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2022020382/content"
+        }
+      }, {
+        "gamePk" : 2022020383,
+        "link" : "/api/v1/game/2022020383/feed/live",
+        "gameType" : "R",
+        "season" : "20222023",
+        "gameDate" : "2022-12-04T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Final",
+          "codedGameState" : "7",
+          "detailedState" : "Final",
+          "statusCode" : "7",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 8,
+              "losses" : 15,
+              "ot" : 4,
+              "type" : "league"
+            },
+            "score" : 2,
+            "team" : {
+              "id" : 28,
+              "name" : "San Jose Sharks",
+              "link" : "/api/v1/teams/28"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 10,
+              "losses" : 13,
+              "ot" : 1,
+              "type" : "league"
+            },
+            "score" : 5,
+            "team" : {
+              "id" : 9,
+              "name" : "Ottawa Senators",
+              "link" : "/api/v1/teams/9"
+            }
+          }
+        },
+        "venue" : {
+          "id" : 5031,
+          "name" : "Canadian Tire Centre",
+          "link" : "/api/v1/venues/5031"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2022020383/content"
+        }
+      }, {
+        "gamePk" : 2022020384,
+        "link" : "/api/v1/game/2022020384/feed/live",
+        "gameType" : "R",
+        "season" : "20222023",
+        "gameDate" : "2022-12-04T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Final",
+          "codedGameState" : "7",
+          "detailedState" : "Final",
+          "statusCode" : "7",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 11,
+              "losses" : 13,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 2,
+            "team" : {
+              "id" : 19,
+              "name" : "St. Louis Blues",
+              "link" : "/api/v1/teams/19"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 13,
+              "losses" : 8,
+              "ot" : 4,
+              "type" : "league"
+            },
+            "score" : 6,
+            "team" : {
+              "id" : 5,
+              "name" : "Pittsburgh Penguins",
+              "link" : "/api/v1/teams/5"
+            }
+          }
+        },
+        "venue" : {
+          "id" : 5034,
+          "name" : "PPG Paints Arena",
+          "link" : "/api/v1/venues/5034"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2022020384/content"
+        }
+      }, {
+        "gamePk" : 2022020385,
+        "link" : "/api/v1/game/2022020385/feed/live",
+        "gameType" : "R",
+        "season" : "20222023",
+        "gameDate" : "2022-12-04T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Final",
+          "codedGameState" : "7",
+          "detailedState" : "Final",
+          "statusCode" : "7",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 15,
+              "losses" : 5,
+              "ot" : 6,
+              "type" : "league"
+            },
+            "score" : 3,
+            "team" : {
+              "id" : 10,
+              "name" : "Toronto Maple Leafs",
+              "link" : "/api/v1/teams/10"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 15,
+              "losses" : 8,
+              "ot" : 1,
+              "type" : "league"
+            },
+            "score" : 4,
+            "team" : {
+              "id" : 14,
+              "name" : "Tampa Bay Lightning",
+              "link" : "/api/v1/teams/14"
+            }
+          }
+        },
+        "venue" : {
+          "id" : 5017,
+          "name" : "Amalie Arena",
+          "link" : "/api/v1/venues/5017"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2022020385/content"
+        }
+      }, {
+        "gamePk" : 2022020386,
+        "link" : "/api/v1/game/2022020386/feed/live",
+        "gameType" : "R",
+        "season" : "20222023",
+        "gameDate" : "2022-12-04T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Final",
+          "codedGameState" : "7",
+          "detailedState" : "Final",
+          "statusCode" : "7",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 18,
+              "losses" : 7,
+              "ot" : 1,
+              "type" : "league"
+            },
+            "score" : 4,
+            "team" : {
+              "id" : 54,
+              "name" : "Vegas Golden Knights",
+              "link" : "/api/v1/teams/54"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 11,
+              "losses" : 7,
+              "ot" : 5,
+              "type" : "league"
+            },
+            "score" : 1,
+            "team" : {
+              "id" : 17,
+              "name" : "Detroit Red Wings",
+              "link" : "/api/v1/teams/17"
+            }
+          }
+        },
+        "venue" : {
+          "id" : 5145,
+          "name" : "Little Caesars Arena",
+          "link" : "/api/v1/venues/5145"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2022020386/content"
+        }
+      }, {
+        "gamePk" : 2022020387,
+        "link" : "/api/v1/game/2022020387/feed/live",
+        "gameType" : "R",
+        "season" : "20222023",
+        "gameDate" : "2022-12-04T00:30:00Z",
+        "status" : {
+          "abstractGameState" : "Final",
+          "codedGameState" : "7",
+          "detailedState" : "Final",
+          "statusCode" : "7",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 7,
+              "losses" : 12,
+              "ot" : 4,
+              "type" : "league"
+            },
+            "score" : 5,
+            "team" : {
+              "id" : 16,
+              "name" : "Chicago Blackhawks",
+              "link" : "/api/v1/teams/16"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 11,
+              "losses" : 10,
+              "ot" : 5,
+              "type" : "league"
+            },
+            "score" : 2,
+            "team" : {
+              "id" : 3,
+              "name" : "New York Rangers",
+              "link" : "/api/v1/teams/3"
+            }
+          }
+        },
+        "venue" : {
+          "id" : 5054,
+          "name" : "Madison Square Garden",
+          "link" : "/api/v1/venues/5054"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2022020387/content"
+        }
+      }, {
+        "gamePk" : 2022020388,
+        "link" : "/api/v1/game/2022020388/feed/live",
+        "gameType" : "R",
+        "season" : "20222023",
+        "gameDate" : "2022-12-04T03:00:00Z",
+        "status" : {
+          "abstractGameState" : "Final",
+          "codedGameState" : "7",
+          "detailedState" : "Final",
+          "statusCode" : "7",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 7,
+              "losses" : 11,
+              "ot" : 4,
+              "type" : "league"
+            },
+            "score" : 2,
+            "team" : {
+              "id" : 53,
+              "name" : "Arizona Coyotes",
+              "link" : "/api/v1/teams/53"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 10,
+              "losses" : 12,
+              "ot" : 3,
+              "type" : "league"
+            },
+            "score" : 3,
+            "team" : {
+              "id" : 23,
+              "name" : "Vancouver Canucks",
+              "link" : "/api/v1/teams/23"
+            }
+          }
+        },
+        "venue" : {
+          "id" : 5073,
+          "name" : "Rogers Arena",
+          "link" : "/api/v1/venues/5073"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2022020388/content"
+        }
+      }, {
+        "gamePk" : 2022020389,
+        "link" : "/api/v1/game/2022020389/feed/live",
+        "gameType" : "R",
+        "season" : "20222023",
+        "gameDate" : "2022-12-04T03:00:00Z",
+        "status" : {
+          "abstractGameState" : "Final",
+          "codedGameState" : "7",
+          "detailedState" : "Final",
+          "statusCode" : "7",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 12,
+              "losses" : 9,
+              "ot" : 4,
+              "type" : "league"
+            },
+            "score" : 5,
+            "team" : {
+              "id" : 13,
+              "name" : "Florida Panthers",
+              "link" : "/api/v1/teams/13"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 15,
+              "losses" : 6,
+              "ot" : 3,
+              "type" : "league"
+            },
+            "score" : 1,
+            "team" : {
+              "id" : 55,
+              "name" : "Seattle Kraken",
+              "link" : "/api/v1/teams/55"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Climate Pledge Arena",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2022020389/content"
+        }
+      }, {
+        "gamePk" : 2022020390,
+        "link" : "/api/v1/game/2022020390/feed/live",
+        "gameType" : "R",
+        "season" : "20222023",
+        "gameDate" : "2022-12-04T03:00:00Z",
+        "status" : {
+          "abstractGameState" : "Final",
+          "codedGameState" : "7",
+          "detailedState" : "Final",
+          "statusCode" : "7",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 10,
+              "losses" : 12,
+              "ot" : 4,
+              "type" : "league"
+            },
+            "score" : 2,
+            "team" : {
+              "id" : 15,
+              "name" : "Washington Capitals",
+              "link" : "/api/v1/teams/15"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 11,
+              "losses" : 10,
+              "ot" : 3,
+              "type" : "league"
+            },
+            "score" : 5,
+            "team" : {
+              "id" : 20,
+              "name" : "Calgary Flames",
+              "link" : "/api/v1/teams/20"
+            }
+          }
+        },
+        "venue" : {
+          "id" : 5075,
+          "name" : "Scotiabank Saddledome",
+          "link" : "/api/v1/venues/5075"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2022020390/content"
+        }
+      }, {
+        "gamePk" : 2022020391,
+        "link" : "/api/v1/game/2022020391/feed/live",
+        "gameType" : "R",
+        "season" : "20222023",
+        "gameDate" : "2022-12-04T03:30:00Z",
+        "status" : {
+          "abstractGameState" : "Final",
+          "codedGameState" : "7",
+          "detailedState" : "Final",
+          "statusCode" : "7",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 14,
+              "losses" : 6,
+              "ot" : 5,
+              "type" : "league"
+            },
+            "score" : 4,
+            "team" : {
+              "id" : 12,
+              "name" : "Carolina Hurricanes",
+              "link" : "/api/v1/teams/12"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 13,
+              "losses" : 10,
+              "ot" : 4,
+              "type" : "league"
+            },
+            "score" : 2,
+            "team" : {
+              "id" : 26,
+              "name" : "Los Angeles Kings",
+              "link" : "/api/v1/teams/26"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Crypto.com Arena",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2022020391/content"
+        }
+      } ],
+      "events" : [ ],
+      "matches" : [ ]
+    } ]
+  }
