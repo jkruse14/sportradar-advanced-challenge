@@ -2,7 +2,7 @@ import axios, { AxiosRequestConfig, Method } from 'axios';
 import * as zlib from 'zlib';
 import { HttpRequestService } from './types';
 
-class AxiosService implements HttpRequestService {
+export class AxiosService implements HttpRequestService {
   private readonly baseUrl: string;
   constructor(baseUrl: string) {
     this.baseUrl = baseUrl;
@@ -10,7 +10,7 @@ class AxiosService implements HttpRequestService {
   private async gunzip(data): Promise<string> {
     return new Promise((resolve) => {
       zlib.gunzip(data, function (error, result) {
-        console.log(result.toString());
+        if (error) throw error;
         return resolve(result.toString());
       });
     });
@@ -49,7 +49,3 @@ class AxiosService implements HttpRequestService {
     return this.request(url, 'post', reqOptions);
   }
 }
-
-export const nhlAxiosService = new AxiosService(
-  'https://statsapi.web.nhl.com/api',
-);
