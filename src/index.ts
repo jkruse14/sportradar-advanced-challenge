@@ -12,7 +12,7 @@ async function main(date: string) {
   }
   try {
     await dataSource.initialize();
-    console.log(`Fetching NHL schedule for ${this.date}`);
+    console.log(`Fetching NHL schedule for ${date}`);
     const gm = new GameManager(dataSource, date);
     while(true) {
       await gm.update();

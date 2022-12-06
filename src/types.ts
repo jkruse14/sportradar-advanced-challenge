@@ -1,6 +1,9 @@
 export interface Observer {
-  update<I>(opts: I): void;
-  getCurrentState<State>(): State;
+  update(opts: unknown): void;
+}
+
+export interface GameObserver extends Observer{
+  id: number;
 }
 
 export interface Subject {

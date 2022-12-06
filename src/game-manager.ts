@@ -6,7 +6,7 @@ import {
 } from './models/nhl-live-player-stats.model';
 import { nhlDataService } from './service/nhl/nhl-data.service';
 import { Player } from './service/nhl/types';
-import { Subject } from './types';
+import { Observer, Subject } from './types';
 
 export class GameManager implements Subject {
   private upcomingGames: Record<number, Game> = {};

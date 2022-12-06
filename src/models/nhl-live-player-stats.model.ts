@@ -12,7 +12,7 @@ export interface CreateNHLPlayerStatsOpts {
 }
 
 @Entity()
-@Index(["gameId", "playerId"], { unique: true })
+// @Index(["gameId", "playerId"], { unique: true })
 export class NHLLivePlayerStats {
   @PrimaryGeneratedColumn()
   id: number;

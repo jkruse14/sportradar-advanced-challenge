@@ -1,11 +1,11 @@
 import { DataSource } from "typeorm";
 import { NHLLivePlayerStats } from "./models/nhl-live-player-stats.model";
 import { Play, PlayEventPlayerType, PlayEventTypeId } from "./service/nhl/types";
-import { Observer } from "./types";
+import { GameObserver, Observer } from "./types";
 
 type TrackedStat = 'hits' | 'goals' | 'assists' | 'points' | 'penaltyMinutes';
 
-export class Game implements Observer {
+export class Game implements GameObserver {
     public readonly id: number;
     private lastCheckedPlay: number = 0;
     private datasource: DataSource;
