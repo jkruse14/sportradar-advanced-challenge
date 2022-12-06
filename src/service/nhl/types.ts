@@ -24,7 +24,7 @@ export interface PlayResult {
   }
   
   export interface Play {
-    players: Array<{ player: Player, playerType: string }>;
+    players: Array<{ player: Player, playerType: PlayEventPlayerType }>;
     result: PlayResult;
     about: PlayAbout;
     coordinates: {

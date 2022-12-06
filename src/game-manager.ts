@@ -1,5 +1,5 @@
 import { DataSource } from 'typeorm';
-import { Game } from './game';
+import { Game, GameObserver } from './game';
 import {
   CreateNHLPlayerStatsOpts,
   NHLLivePlayerStats,
@@ -19,7 +19,7 @@ export class GameManager implements Subject {
     this.datasource = datasource;
     this.date = date;
   }
-  public attach(observer: Game) {
+  public attach(observer: GameObserver) {
     this.games[observer.id] = observer;
   }
   public detach(observer: Game) {
