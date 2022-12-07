@@ -18,7 +18,7 @@ describe('Game Unit Tests', () => {
         }),
       }),
     };
-    game = new Game(dataSource, 117);
+    game = new Game(dataSource, 117, "North Stars", "Blackhawks");
   });
   it("should exist", () => {
     expect(game).toBeDefined();

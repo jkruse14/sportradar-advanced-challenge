@@ -26,12 +26,16 @@ interface PlayersStats {
 
 export class Game implements GameObserver {
   public readonly id: number;
+  public readonly homeTeam: string;
+  public readonly awayTeam: string;
   private lastCheckedPlay: number = 0;
   private datasource: DataSource;
   // TODO: use dependency injection for datasource
-  constructor(datasource: DataSource, id: number) {
+  constructor(datasource: DataSource, id: number, homeTeam: string, awayTeam: string) {
     this.id = id;
     this.datasource = datasource;
+    this.homeTeam = homeTeam;
+    this.awayTeam = awayTeam;
   }
 
   private addStatsToPlayer(

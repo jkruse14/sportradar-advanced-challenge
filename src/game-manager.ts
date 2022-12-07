@@ -6,7 +6,7 @@ import {
   NHLLivePlayerStats,
 } from './models/nhl-live-player-stats.model';
 import { nhlDataService } from './service/nhl/nhl-data.service';
-import { Player } from './service/nhl/types';
+import { NHLGameLiveFeed, Player } from './service/nhl/types';
 import { Observer, Subject } from './types';
 
 export class GameManager implements Subject {
@@ -23,6 +23,9 @@ export class GameManager implements Subject {
     this.gameFactory = new GameFactory();
   }
   public attach(observer: GameObserver) {
+    console.log(
+      `Starting poll for game: ${observer.awayTeam} @ ${observer.homeTeam}`,
+    );
     this.games[observer.id] = observer;
   }
   public detach(observer: Game) {
@@ -30,6 +33,9 @@ export class GameManager implements Subject {
       console.warn(`Game "${observer.id}" not found in managed games`);
       return;
     }
+    console.log(
+      `${observer.awayTeam} @ ${observer.homeTeam} has ended`,
+    );
     delete this.games[observer.id];
     delete this.upcomingGames[observer.id];
   }
@@ -49,24 +55,23 @@ export class GameManager implements Subject {
       date: this.date,
     });
     for (let game of Object.values(schedule.dates[0].games)) {
+      let liveFeed: NHLGameLiveFeed;
       if (!this.games[game.gamePk]) {
-        // if the game hasn't started yet
-        if (!['Live', 'Final'].includes(game.status.abstractGameState)) {
-          const scheduledGame = this.gameFactory.createGame(this.datasource, game.gamePk);
-          this.upcomingGames[scheduledGame.id] = scheduledGame;
-          continue;
-        }
-        // Game is Live or Final
-        console.log(
-          `Starting poll for game: ${game.teams.away.team.name} @ ${game.teams.home.team.name}`,
-        );
         let scheduledGame = this.upcomingGames[game.gamePk];
         if (!scheduledGame) {
-          scheduledGame = new Game(this.datasource, game.gamePk);
+          scheduledGame = this.gameFactory.createGame(this.datasource, game.gamePk, game.teams.home.team.name, game.teams.away.team.name);
+        }
+        // if the game hasn't started yet
+        if (game.status.abstractGameState === "Preview") {
+          this.upcomingGames[scheduledGame.id] = scheduledGame;
+          continue;
+        } else {
+          this.games[game.gamePk] = scheduledGame;
+          delete this.upcomingGames[game.gamePk];
         }
         this.attach(scheduledGame);
         // delete this.upcomingGames[game.gamePk];
-        const liveFeed = await nhlDataService.getGameLiveFeed(game.gamePk);
+        liveFeed = await nhlDataService.getGameLiveFeed(game.gamePk);
         await Promise.all(
           Object.values(liveFeed.gameData.players).map((player: Player) => {
             const initialStats: CreateNHLPlayerStatsOpts = {
@@ -88,7 +93,8 @@ export class GameManager implements Subject {
           }),
         );
       }
-      const liveFeed = await nhlDataService.getGameLiveFeed(game.gamePk);
+      
+      liveFeed = liveFeed || await nhlDataService.getGameLiveFeed(game.gamePk);
       await this.games[game.gamePk].update({
         gameId: game.gamePk,
         plays: liveFeed.liveData.plays.allPlays,

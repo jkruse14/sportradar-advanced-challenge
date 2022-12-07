@@ -27,17 +27,14 @@ describe('Game Manager Unit Tests', () => {
     date = '2022-12-03';
     setStateForGames(schedule.dates[0].games, 'Live');
     gameManager = new GameManager(dataSource, date);
-    gameManager.gameFactory.createGame = jest.fn();
+    const game = gameManager.gameFactory.createGame(dataSource, schedule.dates[0].games[0].gamePk, schedule.dates[0].games[0].teams.home.team.name, schedule.dates[0].games[0].teams.away.team.name);
+    gameManager.gameFactory.createGame = jest.fn().mockReturnValue(game);
+    gameManager.attach = jest.fn();
+    gameManager.detach = jest.fn();
+    Game.prototype.update = jest.fn().mockResolvedValue({});
   });
   afterEach(() => {
     jest.resetAllMocks();
-  });
-
-  it('should call getGameLiveFeed twice per game, if the game is in Final state when process starts', async () => {
-    await gameManager.update();
-    expect(nhlDataService.getGameLiveFeed).toBeCalledTimes(
-      schedule.totalGames * 2,
-    );
   });
   describe("Games in 'Preview State", () => {
     beforeEach(() => {
@@ -46,12 +43,62 @@ describe('Game Manager Unit Tests', () => {
     it('should call gameFactory.createGame once per game', async () => {
       await gameManager.update();
       expect(gameManager.gameFactory.createGame).toBeCalledTimes(
-        schedule.dates[0].games.length,
+        schedule.totalGames,
       );
     });
     it('should NOT call getGameLiveFeed', async () => {
-        await gameManager.update();
-        expect(nhlDataService.getGameLiveFeed).toBeCalledTimes(0);
+      await gameManager.update();
+      expect(nhlDataService.getGameLiveFeed).toBeCalledTimes(0);
+    });
+    it('should NOT call attach', async () => {
+      await gameManager.update();
+      expect(gameManager.attach).toBeCalledTimes(0);
+    });
+    it('should NOT call detach', async () => {
+      await gameManager.update();
+      expect(gameManager.detach).toBeCalledTimes(0);
+    });
+  });
+  describe("Games in 'Live' state", () => {
+    beforeEach(() => {
+        setStateForGames(schedule.dates[0].games, 'Live');
       });
+      it('should call gameFactory.createGame once per game', async () => {
+        await gameManager.update();
+        expect(gameManager.gameFactory.createGame).toBeCalledTimes(
+          schedule.totalGames,
+        );
+      });
+      it('should call getGameLiveFeed once per game', async () => {
+        await gameManager.update();
+        expect(nhlDataService.getGameLiveFeed).toBeCalledTimes(schedule.totalGames);
+      });
+      it('should call attach', async () => {
+        await gameManager.update();
+        expect(gameManager.attach).toBeCalledTimes(schedule.totalGames);
+      });
+      it('should NOT call detach', async () => {
+        await gameManager.update();
+        expect(gameManager.detach).toBeCalledTimes(0);
+      });
+  });
+  describe("Games in 'Final' State when process starts", () => {
+    beforeEach(() => {
+        setStateForGames(schedule.dates[0].games, 'Final');
+      });
+    it('should call getGameLiveFeed once per game', async () => {
+      await gameManager.update();
+      expect(nhlDataService.getGameLiveFeed).toBeCalledTimes(
+        schedule.totalGames,
+      );
+    });
+    it('should call attach', async () => {
+        await gameManager.update();
+        expect(gameManager.attach).toBeCalledTimes(schedule.totalGames);
+      })
+      it('should call detach', async () => {
+        await gameManager.update();
+        expect(gameManager.detach).toBeCalledTimes(schedule.totalGames);
+      })
   });
 });
