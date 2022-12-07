@@ -1,5 +1,6 @@
 import { DataSource } from 'typeorm';
 import { Game, GameObserver } from './game';
+import { GameFactory } from './game-factory';
 import {
   CreateNHLPlayerStatsOpts,
   NHLLivePlayerStats,
@@ -13,11 +14,13 @@ export class GameManager implements Subject {
   private games: Record<number, Game> = {};
   private readonly datasource: DataSource;
   private readonly date: string | undefined;
+  private readonly gameFactory: GameFactory;
 
-  // TODO: use dependency injection for datasource
+  // TODO: use dependency injection for datasource, gameFactory
   constructor(datasource: DataSource, date?: string) {
     this.datasource = datasource;
     this.date = date;
+    this.gameFactory = new GameFactory();
   }
   public attach(observer: GameObserver) {
     this.games[observer.id] = observer;
@@ -49,7 +52,7 @@ export class GameManager implements Subject {
       if (!this.games[game.gamePk]) {
         // if the game hasn't started yet
         if (!['Live', 'Final'].includes(game.status.abstractGameState)) {
-          const scheduledGame = new Game(this.datasource, game.gamePk);
+          const scheduledGame = this.gameFactory.createGame(this.datasource, game.gamePk);
           this.upcomingGames[scheduledGame.id] = scheduledGame;
           continue;
         }
